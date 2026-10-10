@@ -1,0 +1,141 @@
+/* Sidebar / Flyout Menu Styles */
+.flyout-menu {
+  padding: 1rem 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.menu-link:hover {
+  background-color: #f5f7fa;
+  color: #667eea;
+  border-left-color: #667eea;
+}
+
+.menu-link.active {
+  background-color: #eef2ff;
+  color: #667eea;
+  border-left-color: #667eea;
+  font-weight: 600;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1rem;
+}
+
+.menu-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  color: #6c757d;
+}
+
+.menu-arrow.expanded {
+  transform: rotate(90deg);
+  color: #667eea;
+}
+
+.parent-menu {
+  position: relative;
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  border-left: 3px solid #e1e8ed;
+  margin-left: 0;
+}
+
+.submenu .menu-link {
+  padding-left: 3rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.submenu .menu-link:hover {
+  background-color: #f5f7fa;
+}
+
+.submenu .menu-link.active {
+  background-color: #eef2ff;
+}
+
+/* Scrollbar Styling */
+.flyout-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.flyout-menu::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.flyout-menu::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.flyout-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+@media (max-width: 768px) {
+  .flyout-menu {
+    padding: 0.5rem 0;
+  }
+
+  .menu-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submenu .menu-link {
+    padding-left: 2rem;
+  }
+}
